@@ -1,75 +1,46 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+* {
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-  height: 00%;
+    margin: 0;
+    background-color:  #1a1a1a;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+  position: absolute;
   width: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: transparent;
+  height: 100%;
+  background-color: #0a0a0a;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
 }
 
-.banner{
-    width: 100%;
+/*-----------------------------------*/
+
+.header{
     height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(background.jpg);
-    background-size: cover;
-    background-position: center;
-}
-.navbar{
-    width:85%;
-    margin: auto;
-    padding: 35px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.logo{
-    width: 120px;
-    cursor: pointer;
+    box-sizing: border-box;
 }
 
-
-
-
-.content{
-    width: 100%;
-    position: relative;
-    top: 45%;
-    transform: translateY(-50%);
-    text-align: center;
-    color: #fff;
-}
-.fadeinup{
-    font-weight: bold;
-    font-size:55px;
-    position: relative;
-    margin-top: -80px;
-    animation:fadeInUp 1s ease backwards;
-}
-@keyframes fadeInUp{
-  0%{transform:translate(0px, 100px); opacity: 0;}
-  100%{transform:translate(0px, 0); opacity: 1;}
-}
-.content h2{
-    margin: 20px;
-    font-weight: 100;
-    line-height: 25px;
-}
 .line{
-    font-size: 20px;
+    font-size: 3.8vh;
     font-family: Courier;
-    margin: 20px auto;
-    font-weight: 100;
-    line-height: 25px;
+    text-align: center;
+    margin: 20vh auto;
+    font-weight: 110;
+    line-height: 4vh;
     position: relative;
-    top:20%;
+    top:-2vh;
     border-right: 2px solid rgba(255, 255,255,0.75);
     text-align: center;
-    color: #fff;
+    color: #2EFF2E;
     white-space: nowrap;
     overflow: hidden;transform: translateY(10%)
 }
@@ -94,31 +65,311 @@ body {
     }
 }
 
+/*-----------------------------------*/
 
+.fadeinup{   
+    font-family: sans-serif;
+    font-size: 10vh;
+    font-weight: bold;
+    position: relative;
+    top: 36vh;
+    text-align: center;
+    color: #2EFF2E;
+    animation:fadeinup 1s ease backwards;
 
-
-/* ---- particles.js container ---- */
-
-#particles-js {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
-  background-image: url("");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
 }
 
-/*responsive things i think*/
-/* Media Queries: Tablet Landscape */
-@media screen and (max-width: 1060px) {
-    #primary { width:67%; }
-    #secondary { width:30%; margin-left:3%;}
+@keyframes fadeinup{
+    0%{transform:translate(0px, 100px); opacity: 0;}
+    100%{transform:translate(0px, 0); opacity: 1;}
 }
 
-/* Media Queries: Tabled Portrait */
-@media screen and (max-width: 768px) {
-    #primary { width:100%; }
-    #secondary { width:100%; margin:0; border:none; }
+.loadmore{
+    font-family: sans-serif;
+    font-size: 3vh;
+    position: relative;
+    top: 6vh;
+    text-align: center;
+    color: #2EFF2E;
+    text-decoration: none;
+    transition: 0.2s;  
+    animation:loadmore 1s ease backwards;
+    cursor: pointer;
 }
+@keyframes loadmore{
+  0%{transform:translate(0px, 100px); opacity: 0;}
+  100%{transform:translate(0px, 0); opacity: 2;}
+}
+
+.loadmore a{
+    text-decoration: none;
+    color: #2EFF2E;   
+    padding: 10px 12px 10px;
+    border-radius: 15vh;
+    box-shadow: 0px 0px 5px 1px #2EFF2E;
+}
+.loadmore a:active{
+    color: #2EFF2E;
+    box-shadow: 0 0 10px #2EFF2E, 0 0 40px #2EFF2E, 0 0 40px #2EFF2E;
+    opacity: 100%;
+}
+.loadmore a:hover{
+    color: black;
+    background-color: #2EFF2E;
+    opacity: 90%;
+}
+
+#navlinks {
+    flex: 1;
+    text-align: right;
+}
+
+#navlinks ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 5px 10px;
+    position: relative;
+    top: -60vh;
+    right: 8vh;
+}
+#navlinks ul li a{
+    color: #2EFF2E;
+    text-decoration: none;
+    font-size: 2vh;
+}
+#navlinks ul li::after{
+    content: '';
+    width: 0%;
+    height: 1.5px;
+    background: #2EFF2E;
+    margin: auto;
+    display: block;
+    transition: 0.5s;
+}
+#navlinks ul li:hover::after{
+    width: 100%;
+}
+
+.blog{
+    height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 15px;
+    background-color: #0a0a0a;
+}
+.blog-posts h1{
+    color: #55ff00;
+    text-align: center;
+    font-size: 5vh;
+    margin-top: 8vh;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 14vh;
+    text-align: center;
+    justify-content: space-evenly;
+}
+.card {
+  box-shadow: 0 4px 12px 0 rgba(0,0,0,8);
+  transition: 0.3s;
+  width: 15%;
+  margin-top: 10vh;
+  margin-left: -50vh;
+  border-radius: 15px;
+  background-color: #111211;
+  padding: 5px 5px;
+}
+.card:hover{
+    color: #2EFF2E;
+    box-shadow: 0 0 10px #2EFF2E, 0 0 10px #2EFF2E, 0 0 10px #2EFF2E;
+    opacity: 100%;
+}
+.container {
+  padding: 0.1px 16px;
+}
+.container h4{
+    color: #55ff00;
+    text-align: center;
+    margin-left: -15vh;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.about{
+    height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 15px;
+    background-color: #0a0a0a;
+}
+
+.about h1{
+    color: #55ff00;
+    text-align: center;
+    font-size: 5vh;
+    margin-top: 8vh;
+
+}
+.intro h2{
+    color: #ff0000;
+}
+.intro {
+    color: #55ff00;
+    text-align: center;    
+    margin-top: 15vh;
+}
+
+.socials ul{
+    position: absolute;
+    left: 40%;
+    padding: 0;
+    margin: 0;
+    transform: translateY(-50%, -50%);
+    display: flex;
+}
+.socials ul li{
+    list-style: none;
+    margin: 0 15px;
+}
+.socials ul li .fa {
+    font-size: 25px;
+    line-height: 40px;
+    transition: 0.6s;
+    color: #000;
+}
+.socials ul li a{
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: #fff;
+    text-align: center;
+    transition: 0.6s;
+    box-shadow: 0 9px 8px rgba(0, 0, 0, 20);
+}
+
+.socials ul li a:hover{
+    transform: translateY(0, -10px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:  700px){
+    .header{
+        margin-top: -8vh;
+    }
+    .line{
+        font-size: 2vh;
+        top: 10vh;
+        line-height: 2vh;
+    }
+    .fadeinup {
+        font-size: 5vh;
+        top: 40vh;
+    }
+
+    .loadmore {
+        font-size: 2vh;
+    }
+    #navlinks {
+        width: 200px;
+        height: 100vh;
+        position: fixed;
+        right: -200px;
+        top: 0;
+        background-color: #18191a;
+        z-index: 2;
+        text-align: left;
+        transition: 0.5s;
+    }
+    #navlinks ul li{
+        list-style: none;
+        margin: 5px 50px;
+        top: 8vh;
+        text-align: left;
+    }
+    #navlinks ul li a{
+        color: #2EFF2E;
+    }
+    #menuBtn{
+        width: 30px;
+        position: fixed;
+        right: 20px;
+        top: 20px;
+        cursor: pointer;
+        z-index: 2;
+    }
+    .blog{
+        height: 100vh;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 15px;
+        background-color: #0a0a0a;
+    }
+    .blog-posts h1 {
+        color: #55ff00;
+        text-align: center;
+        font-size: 3.5vh;
+        margin-top: 6vh;
+    }
+    .container {
+        margin-left: 14vh;
+        text-align: center;
+        flex-direction: column;
+    }
+    .container h4{
+        margin-left: -16vh;
+    }
+    .card {
+      box-shadow: 0 4px 12px 0 rgba(0,0,0,8);
+      transition: 0.3s;
+      width: 60%;
+      margin-top: 6vh;
+      margin-left: -2vh;
+      border-radius: 15px;
+      background-color: #111211;
+      padding: 5px 5px;
+    }
+    .about{
+        height: 150vh;
+        padding: 15px;
+        box-sizing: border-box;
+        margin: 0;
+    }
+    
+    .about h1{
+        font-size: 3.5vh;
+        margin-top: 60vh;
+    }
+    .intro h2{
+        font-size: 2.5vh;
+    }
+    .socials ul{
+        left: 15%;
+    }
+    .intro p {
+        font-size: 10px;
+    }
